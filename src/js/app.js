@@ -1,16 +1,24 @@
-var app = angular.module('supergasbras', [
-  'ui-router',
+var app = angular.module('cederj-calendar', [
+  'ui.router',
   'LocalStorageModule'
 ])
 
 app.config([
   '$stateProvider',
+  '$urlRouterProvider',
   'localStorageServiceProvider',
 
   function ($stateProvider,
+            $urlRouterProvider,
             localStorageServiceProvider) {
 
     localStorageServiceProvider
-      .setPrefix('supergasbras')
+      .setPrefix('cederj-calendar')
+
+    $stateProvider
+      .state('home', {
+        url: '/',
+        controller: 'MainCtrl'
+      })
   }
 ])

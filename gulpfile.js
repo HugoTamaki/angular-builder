@@ -217,7 +217,7 @@ gulp.task('moveAndConcatJS', function() {
   })
 
   return gulp.src(sources)
-             .pipe(concat('application.js'))
+             // .pipe(concat('application.js'))
              .pipe(gulp.dest(paths.dist.js))
 })
 
